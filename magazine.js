@@ -1,31 +1,31 @@
 
-class Magazine extends Publication{
+class magazine extends Publication{
+
     constructor(title, publisher, periodicy, realease, type, price, discount, copies, releaseDate){
-        super(title, publisher, type, price,  discount, copies)
+        super(title, publisher, type, price,  discount, 20)
         this.periodicy= periodicy;
         this.release= realease;
         this.releaseDate = releaseDate;
 
     }
-    getPublicPrice(){
-        return this.price+(this.price/100)*20-(this.price/100)*this.discount+(this.price/100)*30;
-    }
 
-    toString(){
+    toString() {
+
         const magazineString = super.toString() + '\n' + 
-                             "Periodicy: " + this.periodicy + "\n" + 
-                             "Type: " + this.type + "\n" +
+                             "Periodicy: " + this.realease + "\n" + 
+                             "Type: " + this.periodicy + "\n" +
                              "Release Date: " + this.releaseDate;
                                 
         return magazineString;
     }
 
-    getPublicPrice(){
+    // getPublicPrice(){
 
-        const getPublicPriceWithoutTaxt = super.getPublicPriceWithoutTaxt();
-        const taxt = this.price* 0.2 ;
-        const publicPrice=  getPublicPriceWithoutTaxt + taxt;
+    //     const getPublicPriceWithoutTaxt = super.getPublicPriceWithoutTaxt();
+    //     const taxt = this.price* 0.2 ;
+    //     const publicPrice=  getPublicPriceWithoutTaxt + taxt;
+    //     const roundedPrice = this.round(publicPrice, 2);
         
-        return getPublicPriceWithoutTaxt;
-    }
+    //     return roundedPrice;
+    // }
 }

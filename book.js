@@ -4,7 +4,7 @@
 /// GETPUBLICPRICE() - CALCOLARE PREZZO AL PUBBLICO [PRICE+10%-DISCOUNT+30%]
 
 
-class extends Publication {
+class Book extends Publication {
     constructor (title, author, editor, genre, price, copies, pages, discount, yop){
         super(title, editor, genre, price, copies, discount, 10)
         this.author = author;
@@ -20,12 +20,14 @@ class extends Publication {
                                 
         return bookString;
     }
-    getPublicPrice(){
-        const this.getPublicPriceWithoutTaxt = super.getPublicPriceWithoutTaxt();
-        const taxt = this.price * 0.1 ;
-        const getPublicPriceWithoutTaxt =  this.price - discount + margin;
-        return getPublicPriceWithoutTaxt;
+    // getPublicPrice(){
+    //     return this.price+(this.price/100)*10-(this.price/100)*this.discount+(this.price/100)*30;
+    //     const getPublicPriceWithoutTaxt = super.getPublicPriceWithoutTaxt();
+    //     const taxt = this.price * 0.1 ;
+    //     const publicPrice = PublicPriceWithoutTaxt+taxt;
+        //    const rounderPrice = this.rounderPrice(publicPrice, 2);
+        //    return rounderPrice
 
-    }
+    // }
 }
 
